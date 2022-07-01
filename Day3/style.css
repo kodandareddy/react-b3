@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+*{
+    margin:0;
+    padding:0
+}
+body{
+    background: linear-gradient(90deg, #00d2ff 0%, #3a47d5 100%);
+    font-family:"Lobster";
+    color:#fff;
+
+}
+
+
+.main_heading{
+    font-size:70px;
+    font-weight:400;
+    margin-top:20%;
+    text-align:center;
+
+}
+
+span{
+    color:#1f1f1f;
+    font-size:100px;
+    font-weight:900
+}
+
+.small_heading{
+    margin-top:10px;
+    font-size:18px;
+    letter-spacing:3px;
+    text-align:center;
+
+}
+
+button{
+    margin: auto;
+    display: block;
+
+}
+
+.btn{
+    margin-top:20px;
+    padding:10px 30px;
+    border-radius:5px;
+    border:2px solid #1f1f1f;
+    cursor:pointer;
+    text-transform:uppercase;
+    background-color: transparent;
+    font-weight: 900;
+    color:white
+}
+
+.btn:hover{
+    color:black;
+    background:red;
+    transform: scale(1.5)
+
+
+}
+.btn:active{
+    transform: scale(1.5)
+}
+
+
+.btn-lg{
+    box-shadow: 8px 19px 82px -100px rgba(0,0,0,0.1);
+    transition: color 1s ease, background 2s ease,transform 1s ease-out
+}
+
+
+/* https://www.w3schools.com/css/css3_transitions.asp */
+/* https://www.w3schools.com/css/css_pseudo_classes.asp */
