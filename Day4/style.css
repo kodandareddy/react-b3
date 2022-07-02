@@ -1,0 +1,62 @@
+/* * universal selector */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Julius Sans One", sans-serif;
+  background-color: #ffbb30;
+  height: 100%;
+}
+
+.hero_image {
+  width: 150px;
+  height: 150px;
+  display: block;
+  margin: 30px auto;
+}
+
+.banner {
+  background-color: #ffffff;
+  padding: 30px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.text-container {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.text-container h1 {
+  font-size: 90px;
+  text-align: center;
+}
+
+.text-container p {
+  text-align: right;
+  color: gray;
+  margin-top: 20px;
+  font-weight: 900;
+}
+
+@media screen and (max-width: 800px) {
+  body {
+    background-color: black;
+  }
+
+  .text-container {
+    width: 100%;
+  }
+  .text-container h1 {
+    font-size: 50px;
+    text-align: left;
+  }
+}
+
+
+@media screen and (max-width:600px) and (min-width:400px){
+    body {
+        background-color: blue;
+      }
+}
