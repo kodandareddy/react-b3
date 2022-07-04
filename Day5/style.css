@@ -1,0 +1,80 @@
+body {
+  background-image: url("./images/bg.png");
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  margin: 0 5%;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  height: 20vh;
+  align-items: center;
+}
+
+.nav-link {
+  color: #fff;
+  font-size: 25px;
+  text-decoration: none;
+}
+
+.nav-menu-icon {
+  display: none;
+}
+
+nav .nav-items {
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+  list-style: none;
+}
+
+.brand-img img {
+  height: 80px;
+}
+
+.brand-img{
+    flex:1
+}
+
+.nav-button{
+    background-color:#E03B8B;
+    border:none;
+    padding:10px 40px;
+    cursor:pointer;
+    border-radius:20px;
+    color:#fff
+}
+
+.container {
+    display:flex;
+    height:80vh;
+    flex-direction:row;
+}
+
+.col{
+    flex:0.5
+}
+
+.col-1{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:flex-start;
+    color:#fff
+}
+
+.col-1 p{
+    font-size:25px;
+}
+
+.col-1 h1{
+    font-size:75px
+}
+
+.col-1 img{
+    height:90px
+}
+
+/* https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
