@@ -34,47 +34,77 @@ nav .nav-items {
   height: 80px;
 }
 
-.brand-img{
-    flex:1
+.brand-img {
+  flex: 1;
 }
 
-.nav-button{
-    background-color:#E03B8B;
-    border:none;
-    padding:10px 40px;
-    cursor:pointer;
-    border-radius:20px;
-    color:#fff
+.nav-button {
+  background-color: #e03b8b;
+  border: none;
+  padding: 10px 40px;
+  cursor: pointer;
+  border-radius: 20px;
+  color: #fff;
 }
 
 .container {
-    display:flex;
-    height:80vh;
-    flex-direction:row;
+  display: flex;
+  height: 80vh;
+  flex-direction: row;
 }
 
-.col{
-    flex:0.5
+.col {
+  flex: 0.5;
 }
 
-.col-1{
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:flex-start;
-    color:#fff
+.col-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  color: #fff;
 }
 
-.col-1 p{
-    font-size:25px;
+.col-1 p {
+  font-size: 25px;
 }
 
-.col-1 h1{
-    font-size:75px
+.col-1 h1 {
+  font-size: 75px;
 }
 
-.col-1 img{
-    height:90px
+.col-1 img {
+  height: 90px;
 }
 
+.phone-img {
+  position: absolute;
+  height: 80%;
+  right: 0;
+  bottom: 0;
+}
+.nav-menu-icon i{
+ font-size:25px;
+ cursor:pointer
+}
+@media screen and (max-width: 1230px) {
+  nav .nav-items{
+    display:none
+  }
+  nav .nav-menu-icon{
+    display:block
+  }
+  .phone-img{
+    height:60%
+  }
+}
+
+@media screen and (max-width:900px){
+  .phone-img{
+   display:none
+  }
+  .col-1 img{
+    height:50px
+  }
+}
 /* https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
