@@ -1,3 +1,130 @@
-body{
-    font-family: 'Montserrat', sans-serif;
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #d5d5d5;
+  font-family: "Montserrat", sans-serif;
+  height: 100vh;
+  overflow: hidden;
+}
+
+main {
+  display: flex;
+  position: relative;
+  height: 100%;
+}
+
+.image-top {
+  height: 500px;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+
+.mockup {
+  height: 500px;
+}
+
+.flex {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section {
+  flex: 0.5;
+}
+/* right Side Part */
+.flex-column {
+  flex-direction: column;
+}
+
+form {
+  width: 100%;
+}
+
+.form-section {
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 50px;
+}
+
+.form-section .form-header {
+  font-size: 40px;
+  margin-bottom: 25px;
+  color: #343333;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+
+input {
+  padding: 10px 20px;
+  font-size: 20px;
+  border-radius: 8px;
+  border: 1px solid #a7a7a7;
+  width: 100%;
+  margin: 0 6px 10px 6px;
+}
+
+.row {
+  display: flex;
+}
+.form-section {
+  flex: 0.3;
+}
+
+.btn {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 20px;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  background-color: #f9a12f;
+  cursor: pointer;
+}
+
+.btn.btn-facebook {
+  background-color: #354c8d;
+}
+
+.btn.btn-Twitter {
+  background-color: #009fe9;
+}
+
+.btn:hover {
+  background-color: #1d1d1d;
+  transform: scale(0.93);
+}
+
+@media screen and (max-width: 600px) {
+  .form-section {
+    padding: 20px 30px;
+  }
+  .row {
+    flex-direction: column;
+  }
+  .mockup {
+    display: none;
+  }
+
+  section {
+    flex: 1;
+  }
+  .form-section{
+    flex:1
+  }
+  main {
+    flex-direction: column;
+  }
+
+  form {
+    width: 75%;
+  }
 }
