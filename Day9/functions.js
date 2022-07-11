@@ -30,20 +30,16 @@ var myValue = returnEvenOrOdd(112);
 //   1-I am One
 //   2:I am Two
 
-function returnMyValue(myNumber){
+function returnMyValue(myNumber) {
+  if (parseInt(myNumber) === 1) {
+    return "I am One";
+  }
 
-    
-    if(parseInt(myNumber) ===1){
-     return "I am One"
-    }
+  if (myNumber === 2) {
+    return "I am Two";
+  }
 
-    if(myNumber === 2){
-     return "I am Two"
-    }
-
-    return "You are not in my Range"
-
-
+  return "You are not in my Range";
 }
 
-console.log(returnMyValue(2)) 
+console.log(returnMyValue(2));

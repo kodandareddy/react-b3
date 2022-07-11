@@ -35,3 +35,4 @@ switch (user) {
     console.log("Not valid user");
     break;
 }
+// ||
