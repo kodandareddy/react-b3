@@ -20,3 +20,4 @@
 var myArray=[23,56,87,32,75,13]
 
 console.log(myArray.slice(1,5))
+

@@ -1,17 +1,9 @@
-// var data="React"
+// let myReqTag=document.getElementsByTagName('h1')
+// console.log(myReqTag)
 
-// var data1=true
+// let myValue=myReqTag[0]
+// console.log(myValue)
+// let myHtmlData=myValue.innerHTML
 
-// var myNumber=1
-//   null,undefined
-
-// var myVar_1 = String(45);	
-
-// console.log(typeof myVar_1)
-// https://www.scaler.com/topics/javascript/type-coercion-javascript/
-
-for(let i=0;i<5;i++){
-  setTimeout(()=>{
-  console.log(i)
-  },1000)
-}
+// myHtmlData="My Name is Shyam"
+// console.log(myHtmlData)

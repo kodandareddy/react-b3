@@ -3,6 +3,12 @@ var myNumbers=[2,4,5,6,7,8]
 
 // }
 
+
+// let n=5
+// for(var i=1;i<=5;i++){
+//     console.log("i love js")
+// }
+
 // for(var i=0;i<myStates.length;i=i+1){
 //     console.log(myStates[i])
 // }
@@ -15,7 +21,6 @@ var myNumbers=[2,4,5,6,7,8]
 
 // console.log(myOutput)
 
-https://www.programiz.com/javascript/for-loop
 
 // program to display the sum of natural numbers
 // let n = 100
@@ -29,3 +34,22 @@ https://www.programiz.com/javascript/for-loop
 // }
 
 // console.log('sum:', sum);
+
+https://www.programiz.com/javascript/for-loop
+
+var userInfo={
+    name:"Ram",
+    role:"admin",
+    courserCount:0
+}
+
+var myKeys=Object.keys(userInfo)
+
+for(var i=0;i<myKeys.length;i++){
+    console.log(userInfo[myKeys[i]])
+    // userInfo[name],
+    // userInfo[role],
+    // userInfo[courserCount]
+    // console.log(userInfo[myKeys[i]])
+    // console.log(userInfo[])
+}
