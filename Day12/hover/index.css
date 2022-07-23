@@ -61,3 +61,23 @@ body {
     margin-bottom: 0;
   }
   
+
+
+  .container{
+    position: relative;
+  }
+
+  .img{
+    width: 500px;
+    height: 500px;
+    background-color: black;
+  }
+
+  .img1{
+    position: absolute;
+    top: 0;
+    right: 50%;
+    width: 100px;
+    height: 100px;
+    background-color: red;
+  }

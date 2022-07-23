@@ -15,6 +15,8 @@ setInterval(()=>{
 
 
 
-setTimeout(()=>{
-    followers.innerHTML="Followers"
-},3000)
+setInterval(() => {
+    followers.innerHTML= followers.innerHTML ?"":"Followers"
+
+}, 300);
+ 
