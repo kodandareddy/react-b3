@@ -79,6 +79,9 @@ console.log(arr);
 
 
 
+
+
+
 function SumMyValue(a,...rest){
     console.log(a,rest)
 //   return a+b+c+d+e+f
