@@ -110,3 +110,79 @@
 // let [myProduct,myProduct1]=data
 
 // console.log(myProduct.productName,myProduct1.productName)
+
+
+// function x(){
+//   return()=>{
+//     console.log(i)
+//   }
+//   var i=1
+// }
+// x()
+
+
+
+// function pushAllZerosToEnd(myArray){
+//     let count=0
+//   for(let i=0;i<myArray.length;i++){
+    
+//     if(myArray[i]!=0){
+//     myArray[count++]=myArray[i]
+//     }
+//   }
+//   while(count<myArray.length){
+//     myArray[count++]=0
+//   }
+//   console.log(myArray)
+// }
+
+// pushAllZerosToEnd([1, 2, 0, 0, 0, 3, 6])
+
+// bubble sort
+
+
+
+// function bubbleSort(myArr){
+
+
+//     for(let i=0;i<myArr.length;i++){
+//           for(let j=0;j<myArr.length-i-1;j++){
+//             if(myArr[j]<myArr[j+1]){
+//                 let temp=myArr[j]
+//                 myArr[j]=myArr[j+1]
+//                 myArr[j+1]=temp
+//             }
+//           }
+//     }
+
+//     console.log(myArr)
+
+
+// }
+
+// let data=[23,1,4,90,12]
+// bubbleSort(data)
+
+
+let A = [5, 6, 0, 4, 6, 0, 9, 0, 8];
+let n = A.length;
+let j = 0;
+
+
+
+for(let i=0;i<n;i++){
+    if(A[i]!=0){
+        swap(A,i,j)
+        j++
+    }
+}
+
+
+
+function swap(A,i,j){
+  let temp=A[i]
+   A[i]=A[j]
+   A[j]=temp
+}
+
+console.log(A)

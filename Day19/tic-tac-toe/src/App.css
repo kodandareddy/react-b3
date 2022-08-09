@@ -1,0 +1,30 @@
+body {
+  background-color:#fff;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.flex > div {
+  flex: 30%;
+}
+.box {
+  width: auto;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icon {
+  font-size: 35px;
+  color: #ffffff;
+}
+
+
+.card-body{
+  text-align: center;
+  cursor: pointer;
+}
