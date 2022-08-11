@@ -1,29 +1,27 @@
-import logo from "./logo.svg";
-import "./App.css";
-import { useReducer, useRef, useState } from "react";
-import Child from "./Child";
-import ListGRoup from "./Form/ListGroup";
-import InputComponent from "./Form/InputComponent";
-import { TodoContext } from "./Context/Context";
-import "./App.css";
-import reducer from "./Context/reducer";
+// import logo from "./logo.svg";
+// import "./App.css";
+// import { useReducer, useRef, useState } from "react";
+// import Child from "./Child";
+// import ListGRoup from "./Form/ListGroup";
+// import InputComponent from "./Form/InputComponent";
+// import { TodoContext } from "./Context/Context";
+// import "./App.css";
+// import reducer from "./Context/reducer";
 
+// function App() {
+//   // const [myList, setMyList] = useState([]);
+//   const[myList,dispatch]=useReducer(reducer,[])
+//   console.log(myList);
+//   return (
+//     <TodoContext.Provider value={{myList,dispatch}}>
+//       <ListGRoup  />
+//       <InputComponent  />
+//     </TodoContext.Provider>
 
+//   );
+// }
 
-function App() {
-  // const [myList, setMyList] = useState([]);
-  const[myList,dispatch]=useReducer(reducer,[])
-  console.log(myList);
-  return (
-    <TodoContext.Provider value={{myList,dispatch}}>
-      <ListGRoup  />
-      <InputComponent  />
-    </TodoContext.Provider>
-    
-  );
-}
-
-export default App;
+// export default App;
 
 // const myRef=useRef(null)
 // const handleClick=()=>{
@@ -50,8 +48,8 @@ export default App;
 //   }
 // };
 
-{
-  /* <Container>
+//{
+/* <Container>
 <InputGroup className="mb-3">
   <InputGroup.Text>@</InputGroup.Text>
   <Form.Control
@@ -83,4 +81,24 @@ export default App;
 </InputGroup>
 <FormData userName={userName} amount={amount} address={address} />
 </Container> */
-}
+//}
+
+// Shopping Cart
+
+import React from "react";
+import { Col, Container, Row } from "reactstrap";
+import BuyPage from "./ShoppingCart/buyPage";
+const App = () => {
+  return (
+    <Container>
+      <Row>
+        <Col md="8">
+          <BuyPage/>
+        </Col>
+        <Col md="4"> 2</Col>
+      </Row>
+    </Container>
+  );
+};
+
+export default App;
