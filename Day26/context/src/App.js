@@ -85,17 +85,34 @@
 
 // Shopping Cart
 
-import React from "react";
+import React, { useState } from "react";
 import { Col, Container, Row } from "reactstrap";
 import BuyPage from "./ShoppingCart/buyPage";
+import Cart from "./ShoppingCart/Cart";
+import { ToastContainer, toast } from "react-toastify";
+
 const App = () => {
+  const [cartItems, setCartItems] = useState([]);
+
+  const addInCart = (item) => {
+    const isAlreadyAdded = cartItems.findIndex((cart) => cart.id == item.id);
+    if (isAlreadyAdded != -1) {
+      toast.error('Already Added!');
+      return;
+    }
+    setCartItems([...cartItems, item]);
+  };
+
+  console.log(cartItems)
   return (
     <Container>
       <Row>
         <Col md="8">
-          <BuyPage/>
+          <BuyPage addInCart={addInCart}/>
         </Col>
-        <Col md="4"> 2</Col>
+        <Col md="4">
+          <Cart  cartItems={cartItems}/>
+        </Col>
       </Row>
     </Container>
   );

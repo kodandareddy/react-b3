@@ -12,9 +12,13 @@ import {
   Row,
 } from "reactstrap";
 import { faker } from "@faker-js/faker";
-
-const BuyPage = () => {
+import Product from "./Product";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+const BuyPage = ({addInCart}) => {
   const [products, setProducts] = useState([]);
+
+
   useEffect(() => {
     fetchPhotos().then((res) => {
       const { photos } = res;
@@ -32,6 +36,7 @@ const BuyPage = () => {
     });
   }, []);
 
+
   const fetchPhotos = () => {
     return new Promise((resolve, reject) => {
       resolve(data);
@@ -41,24 +46,21 @@ const BuyPage = () => {
     <Container>
       <h1 className="text-success text-center">Buy Page</h1>
       <Row>
-        {products.map((product) => {
-          return (
-            <Col sm={12} md={6} lg={4}>
-              <Card className="mt-2 mb-1">
-                <img alt="Sample" src={product.smallImage} />
-                <CardBody>
-                  <CardTitle tag="h5">Product:{product.productName}</CardTitle>
-
-                  <CardSubtitle className="mb-2 text-muted" tag="h6">
-                    Price:{product.price}
-                  </CardSubtitle>
-                  <Button color="primary">Button</Button>
-                </CardBody>
-              </Card>
-            </Col>
-          );
-        })}
+        {products.map((product) => (
+          <Product key={product.id} product={product} addInCart={addInCart} />
+        ))}
       </Row>
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
     </Container>
   );
 };
