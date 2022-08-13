@@ -22,7 +22,6 @@ const BuyPage = ({addInCart}) => {
   useEffect(() => {
     fetchPhotos().then((res) => {
       const { photos } = res;
-      console.log(photos);
       const data = photos.map((photo) => {
         return {
           id: photo.id,
@@ -31,7 +30,6 @@ const BuyPage = ({addInCart}) => {
           price: faker.commerce.price(),
         };
       });
-      console.log(data);
       setProducts(data);
     });
   }, []);

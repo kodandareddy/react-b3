@@ -85,14 +85,18 @@
 
 // Shopping Cart
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Col, Container, Row } from "reactstrap";
 import BuyPage from "./ShoppingCart/buyPage";
 import Cart from "./ShoppingCart/Cart";
 import { ToastContainer, toast } from "react-toastify";
 
 const App = () => {
-  const [cartItems, setCartItems] = useState([]);
+  const [cartItems, setCartItems] = useState(JSON.parse(localStorage.getItem('cart')));
+
+  useEffect(()=>{
+    localStorage.setItem('cart',JSON.stringify(cartItems))
+  },[cartItems])
 
   const addInCart = (item) => {
     const isAlreadyAdded = cartItems.findIndex((cart) => cart.id == item.id);
@@ -102,8 +106,18 @@ const App = () => {
     }
     setCartItems([...cartItems, item]);
   };
+  const Pay=()=>{
+    setCartItems([])
+    toast.success('Purchase completed!');
 
-  console.log(cartItems)
+  }
+  const removeFromCart=(id)=>{
+    setCartItems(prev=>{
+      return prev.filter(cart => cart.id !=id )
+    })
+  }
+
+
   return (
     <Container>
       <Row>
@@ -111,7 +125,7 @@ const App = () => {
           <BuyPage addInCart={addInCart}/>
         </Col>
         <Col md="4">
-          <Cart  cartItems={cartItems}/>
+          <Cart Pay={Pay} removeFromCart={removeFromCart}  cartItems={cartItems}/>
         </Col>
       </Row>
     </Container>
