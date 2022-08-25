@@ -1,16 +1,20 @@
+// Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyD4uQgt32upNffdGIeI_4I-9cSkQRPDWSQ",
-  authDomain: "emailvalid-a5cd3.firebaseapp.com",
-  projectId: "emailvalid-a5cd3",
-  storageBucket: "emailvalid-a5cd3.appspot.com",
-  messagingSenderId: "171246623643",
-  appId: "1:171246623643:web:82d02a42a2e0b138e45f3e",
-  measurementId: "G-JECD456MHY"
+  apiKey: "AIzaSyCEKc1a6EtJ26kmb46iIWev_IgZUd6YqlA",
+  authDomain: "reactsignin-aee83.firebaseapp.com",
+  projectId: "reactsignin-aee83",
+  storageBucket: "reactsignin-aee83.appspot.com",
+  messagingSenderId: "6449962141",
+  appId: "1:6449962141:web:370f6e1b90e50733504874",
+  measurementId: "G-KX13G987GN"
 };
 
-// Initialize Firebase
 
 export default firebaseConfig
+
+// // Initialize Firebase
+// const app = initializeApp(firebaseConfig);
+// const analytics = getAnalytics(app);
