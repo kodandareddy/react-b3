@@ -19,12 +19,14 @@ import Navbar from "./NavBar/Navbar";
 import SignInNew from "./SignInNew/SignInNew";
 import SignUp from "./SignUp/SignUp";
 import firebaseConfig from './fireBaseConfig'
+import { UserContext } from "./Context/userContext";
 function App() {
   const app = initializeApp(firebaseConfig);
-  console.log(app)
+   const [user,setUser]=useState(null)
   return (
     <div className="App">
       <Router>
+        <UserContext.Provider value={{user,setUser}}>
         <Navbar />
         <Switch>
         <Route exact path="/">
@@ -37,6 +39,7 @@ function App() {
             <SignUp />
           </Route>
         </Switch>
+        </UserContext.Provider>
       </Router>
     </div>
   );

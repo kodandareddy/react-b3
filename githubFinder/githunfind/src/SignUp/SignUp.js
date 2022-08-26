@@ -14,28 +14,33 @@ import {
   Row,
 } from "reactstrap";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
-import { useHistory } from 'react-router-dom';
+import { useHistory } from "react-router-dom";
 
 const SignUp = () => {
   const history = useHistory();
 
- const[email,setEmail]=useState("")
-const [password,setPassword]=useState("")
-  const handleSubmit=(e)=>{
-    e.preventDefault()
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const handleSubmit = (e) => {
+    e.preventDefault();
     const auth = getAuth();
-    createUserWithEmailAndPassword(auth,email,password).then((data)=>{
-     history.push('/')
-    })
-  } 
- 
+    createUserWithEmailAndPassword(auth, email, password)
+      .then((data) => {
+        
+        history.push("/");
+      })
+      .catch((error) => {
+        alert(error.message);
+      });
+  };
+
   return (
     <div>
       <Container className="text-center offset-lg-3 mt-5">
         <Row>
           <Col lg={6}>
             <Card>
-              <Form onSubmit={handleSubmit} >
+              <Form onSubmit={handleSubmit}>
                 <CardHeader className="">Signup here</CardHeader>
                 <CardBody>
                   <FormGroup row>
@@ -49,7 +54,7 @@ const [password,setPassword]=useState("")
                         id="email"
                         placeholder="provide your email"
                         value={email}
-                        onChange={(e)=>setEmail(e.target.value)}
+                        onChange={(e) => setEmail(e.target.value)}
                       />
                     </Col>
                   </FormGroup>
@@ -64,7 +69,7 @@ const [password,setPassword]=useState("")
                         id="password"
                         placeholder="your password here"
                         value={password}
-                        onChange={(e)=>setPassword(e.target.value)}
+                        onChange={(e) => setPassword(e.target.value)}
                       />
                     </Col>
                   </FormGroup>
