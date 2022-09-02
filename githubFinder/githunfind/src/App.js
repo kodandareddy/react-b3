@@ -23,14 +23,17 @@ import { UserContext } from "./Context/userContext";
 function App() {
   const app = initializeApp(firebaseConfig);
    const [user,setUser]=useState(null)
+   let data="sadsd"
   return (
     <div className="App">
       <Router>
+
         <UserContext.Provider value={{user,setUser}}>
         <Navbar />
+
         <Switch>
         <Route exact path="/">
-        <h1>I am Home</h1>
+          <Home/>
           </Route>
           <Route exact path="/signIn">
             <SignInNew />

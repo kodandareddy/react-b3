@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import {
   Button,
   Card,
@@ -15,12 +15,15 @@ import {
 } from "reactstrap";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import { useHistory } from "react-router-dom";
+import { UserContext } from "../Context/userContext";
 
 const SignUp = () => {
   const history = useHistory();
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const context=useContext(UserContext)
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const auth = getAuth();
@@ -28,6 +31,8 @@ const SignUp = () => {
       .then((data) => {
         
         history.push("/");
+        context.setUser(data.user)
+
       })
       .catch((error) => {
         alert(error.message);

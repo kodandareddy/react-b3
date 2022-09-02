@@ -22,6 +22,7 @@ const SignInNew = () => {
   const [password, setPassword] = useState("");
   const history = useHistory();
  const context=useContext(UserContext)
+ console.log(context)
  const handleSubmit=(e)=>{
   e.preventDefault()
   const auth = getAuth();
